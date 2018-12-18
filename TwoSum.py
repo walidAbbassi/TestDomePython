@@ -26,7 +26,7 @@ class TwoSum:
             # print (dict)
             if target_sum - numbers[i] in dict.keys() and dict[target_sum - numbers[i]] != i:  # ensure not itself; [2,5,4] sum=10 should be false 但是有可能两个5
                 return (dict[target_sum - numbers[i]], i)
-            dict[numbers[i]] = i  # should be here; incase [5,5] 第二个5把第一个覆盖掉 导致return false
+            dict[numbers[i]] = i  # should be here; incase [5,5] return false
         return None
 
     @staticmethod
