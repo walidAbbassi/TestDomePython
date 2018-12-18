@@ -24,7 +24,7 @@ class TwoSum:
         for i in range(len(numbers)):
             # dict[numbers[i]] = i
             # print (dict)
-            if target_sum - numbers[i] in dict.keys() and dict[target_sum - numbers[i]] != i:  # ensure not itself; [2,5,4] sum=10 should be false 但是有可能两个5
+            if target_sum - numbers[i] in dict.keys() and dict[target_sum - numbers[i]] != i:  # ensure not itself; [2,5,4] sum=10 should be false
                 return (dict[target_sum - numbers[i]], i)
             dict[numbers[i]] = i  # should be here; incase [5,5] return false
         return None
